@@ -28,7 +28,6 @@
       headers: {
           "Cache-Control": "no-cache",
           "Content-Type": "application/x-www-form-urlencoded",
-          Origin: `${window.location.origin}`,
       },
       withCredentials: false,
     })
