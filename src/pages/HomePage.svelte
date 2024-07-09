@@ -16,7 +16,7 @@
   
   const getSocial = () => Socials.filter(s => s.id == $social.value)[0];
 
-  const handleTiktokGetProfile = async () => {
+  const handleTiktokAcessToken = async () => {
     const { token } = getSocial();
     await axios.post(token, {
       client_id: $clientId.value,
@@ -40,7 +40,7 @@
   const handleForSocial = () => {
     switch ($social.value) {
       case 'tiktok': 
-        return handleTiktokGetProfile();
+        return handleTiktokAcessToken();
       default:
         alert('social not supported');
         break;
