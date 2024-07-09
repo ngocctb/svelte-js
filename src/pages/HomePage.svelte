@@ -26,8 +26,10 @@
       grant_type: 'authorization_code'
     }, {
       headers: {
+        "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/x-www-form-urlencoded",
-      }
+      },
+      withCredentials: false,
     })
     .then((res) => {
       console.log(res.data);
@@ -47,7 +49,7 @@
 
   const handledSubmit = () => {
     myForm.validate(); 
-   console.log($myForm);
+   console.log($myForm.summary);
    if (!$myForm.valid) {
     return handleForSocial();
    }
