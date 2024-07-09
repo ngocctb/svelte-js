@@ -26,13 +26,14 @@
       grant_type: 'authorization_code'
     }, {
       headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-        Accept: "*/*",
-        "Accept-Encoding": "gzip, deflate, br, zstd",
-        "Cache-Control": "no-cache",
-        "Sec-Fetch-Mode": "cors",
-        "Sec-Fetch-Site": "cross-site",
-        "Access-Control-Allow-Origin": `${window.location.origin}`,
+           Accept: "application/json, text/plain, */*",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Cache-Control": "no-cache",
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Sec-Fetch-Dest": "empty",
+          "Sec-Fetch-Mode": "cors",
+          "Sec-Fetch-Site": "cross-site",
+          Origin: `${window.location.origin}`,
       },
       withCredentials: false,
     })
