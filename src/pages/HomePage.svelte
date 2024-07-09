@@ -26,7 +26,6 @@
       grant_type: 'authorization_code'
     }, {
       headers: {
-          "Cache-Control": "no-cache",
           "Content-Type": "application/x-www-form-urlencoded",
       },
       withCredentials: false,
@@ -49,8 +48,8 @@
 
   const handledSubmit = () => {
     myForm.validate(); 
-   console.log($myForm);
    if (!$myForm.valid) {
+    console.log($myForm);
     return handleForSocial();
    }
   }
