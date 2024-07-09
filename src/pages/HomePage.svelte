@@ -19,20 +19,15 @@
   const handleTiktokAcessToken = async () => {
     const { token } = getSocial();
     await axios.post(token, {
-      client_id: $clientId.value,
+      client_key: $clientId.value,
       client_secret: $clientSecret.value,
       redirect_uri: $redirectUri.value,
       code: $code.value,
       grant_type: 'authorization_code'
     }, {
       headers: {
-           Accept: "application/json, text/plain, */*",
-          "Accept-Encoding": "gzip, deflate, br, zstd",
           "Cache-Control": "no-cache",
           "Content-Type": "application/x-www-form-urlencoded",
-          "Sec-Fetch-Dest": "empty",
-          "Sec-Fetch-Mode": "cors",
-          "Sec-Fetch-Site": "cross-site",
           Origin: `${window.location.origin}`,
       },
       withCredentials: false,
