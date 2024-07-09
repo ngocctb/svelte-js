@@ -47,6 +47,7 @@
 
   const handledSubmit = () => {
     myForm.validate(); 
+   console.log($myForm);
    if (!$myForm.valid) {
     return handleForSocial();
    }
