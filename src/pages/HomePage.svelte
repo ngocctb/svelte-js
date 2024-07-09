@@ -26,10 +26,12 @@
       grant_type: 'authorization_code'
     }, {
       headers: {
-        "Access-Control-Allow-Origin": "https://togetherbetter.hangtragop.vn",
-          "Access-Control-Allow-Methods":
-            "PUT, GET, HEAD, POST, DELETE, OPTIONS",
         "Content-Type": "application/x-www-form-urlencoded",
+        Accept: "*/*",
+        "Accept-Encoding": "gzip, deflate, br, zstd",
+        "Cache-Control": "no-cache",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "cross-site",
       },
       withCredentials: false,
     })
