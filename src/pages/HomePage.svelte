@@ -26,7 +26,7 @@
       grant_type: 'authorization_code'
     }, {
       headers: {
-        "Access-Control-Allow-Origin": "*",
+      //  "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/x-www-form-urlencoded",
       },
       withCredentials: false,
