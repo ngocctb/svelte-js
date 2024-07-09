@@ -32,6 +32,7 @@
         "Cache-Control": "no-cache",
         "Sec-Fetch-Mode": "cors",
         "Sec-Fetch-Site": "cross-site",
+        "Access-Control-Allow-Origin": `${window.location.origin}`,
       },
       withCredentials: false,
     })
