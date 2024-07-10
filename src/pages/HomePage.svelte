@@ -27,8 +27,9 @@
     }, {
       headers: {
           "Content-Type": "application/x-www-form-urlencoded",
+          "Access-Control-Allow-Origin": "*"
       },
-      withCredentials: false,
+      withCredentials: true,
     })
     .then((res) => {
       console.log(res.data);
