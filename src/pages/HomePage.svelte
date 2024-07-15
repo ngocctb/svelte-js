@@ -47,13 +47,13 @@
           credentials: 'same-origin',
           method: "POST",
           headers,
-          body:  {
+          body: new URLSearchParams({
             client_key: $clientId.value,
             client_secret: $clientSecret.value,
             redirect_uri: $redirectUri.value,
             code: $code.value,
             grant_type: 'authorization_code'
-          },
+          }),
         })
           .then((response) => response.json())
           .then((data) => {
