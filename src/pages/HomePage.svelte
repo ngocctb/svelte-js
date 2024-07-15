@@ -38,7 +38,7 @@
   }
 
   const handleTiktokAcessToken = async () => {
-         const { token } = getSocial();
+        const { token } = getSocial();
         const headers = new Headers({
           "Content-Type": "application/x-www-form-urlencoded",
         });
@@ -62,7 +62,6 @@
           .catch((err) => {
             onReject(err);
           });
-      }
   }
 
   const handleForSocial = () => {
