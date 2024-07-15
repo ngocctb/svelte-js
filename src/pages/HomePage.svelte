@@ -16,7 +16,7 @@
   
   const getSocial = () => Socials.filter(s => s.id == $social.value)[0];
 
-  const handleTiktokAcessToken = async () => {
+  const handleTiktokAcessTokenAxios = async () => {
     const { token } = getSocial();
     await axios.post(token, {
       client_key: $clientId.value,
@@ -35,6 +35,34 @@
       console.log(res.data);
     })
     .catch((error) => console.log(error));
+  }
+
+  const handleTiktokAcessToken = async () => {
+         const { token } = getSocial();
+        const headers = new Headers({
+          "Content-Type": "application/x-www-form-urlencoded",
+        });
+        await fetch(token, {
+          mode: "cors",
+          credentials: 'same-origin',
+          method: "POST",
+          headers,
+          body:  {
+            client_key: $clientId.value,
+            client_secret: $clientSecret.value,
+            redirect_uri: $redirectUri.value,
+            code: $code.value,
+            grant_type: 'authorization_code'
+          },
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(res.data);
+          })
+          .catch((err) => {
+            onReject(err);
+          });
+      }
   }
 
   const handleForSocial = () => {
